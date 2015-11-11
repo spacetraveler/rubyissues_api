@@ -12,7 +12,7 @@ class RepositoriesControllerTest < ActionController::TestCase
 
   test "should create repository" do
     assert_difference('Repository.count') do
-      post :create, params: { repository: { data: @repository.data } }
+      post :create, params: { repository: { full_name: @repository.full_name } }
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class RepositoriesControllerTest < ActionController::TestCase
   end
 
   test "should update repository" do
-    patch :update, params: { id: @repository, repository: { data: @repository.data } }
+    patch :update, params: { id: @repository, repository: { full_name: @repository.full_name } }
     assert_response 200
   end
 

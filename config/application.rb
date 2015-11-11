@@ -33,5 +33,14 @@ module RubyissuesApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Add the services directory to the autoload and eagerload paths
+    config.autoload_paths += %W(
+      #{config.root}/app/services
+    )
+
+    config.eager_load_paths += %W(
+      #{config.root}/app/services
+    )
   end
 end

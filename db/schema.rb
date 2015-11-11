@@ -15,12 +15,15 @@ ActiveRecord::Schema.define(version: 20151110185547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
 
   create_table "repositories", force: :cascade do |t|
-    t.hstore   "data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "full_name"
+    t.string   "description"
+    t.string   "avatar_url"
+    t.string   "html_url"
+    t.string   "homepage"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

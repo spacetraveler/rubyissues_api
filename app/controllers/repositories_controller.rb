@@ -16,6 +16,7 @@ class RepositoriesController < ApplicationController
   # POST /repositories
   def create
     @repository = Repository.new(repository_params)
+    SeedRepositoryService.new(@repository)
 
     if @repository.save
       render json: @repository, status: :created, location: @repository
@@ -46,6 +47,6 @@ class RepositoriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def repository_params
-      params.require(:repository).permit(:data)
+      params.require(:repository).permit(:full_name)
     end
 end

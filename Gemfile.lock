@@ -102,10 +102,13 @@ GEM
       actionpack (>= 4.0)
       activemodel (>= 4.0)
       railties (>= 4.0)
+    addressable (2.3.8)
     builder (3.2.2)
     byebug (8.1.0)
     concurrent-ruby (1.0.0.pre5)
     erubis (2.7.0)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -118,9 +121,13 @@ GEM
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.2)
+    multipart-post (2.0.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    octokit (4.1.1)
+      sawyer (~> 0.6.0, >= 0.5.3)
     pg (0.18.3)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
@@ -133,6 +140,9 @@ GEM
       loofah (~> 2.0)
     rake (10.4.2)
     sass (3.4.19)
+    sawyer (0.6.0)
+      addressable (~> 2.3.5)
+      faraday (~> 0.8, < 0.10)
     spring (1.4.1)
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -146,8 +156,10 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.0.rc2)
   arel!
   byebug
+  octokit (~> 4.0)
   pg
   rack!
+  rack-cors
   rails!
   sass-rails!
   spring
