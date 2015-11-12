@@ -42,5 +42,8 @@ module RubyissuesApi
     config.eager_load_paths += %W(
       #{config.root}/app/services
     )
+
+    config.github_user     = ENV['GITHUB_USER']
+    config.github_password = ENV['GITHUB_PASSWORD']
   end
 end
