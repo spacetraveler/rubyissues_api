@@ -21,6 +21,8 @@ gem 'pg'
 
 gem "octokit", "~> 4.0"
 
+gem "rails_12factor", group: :production
+
 # Use ActiveModelSerializers to serialize JSON responses
 gem 'active_model_serializers', '~> 0.10.0.rc2'
 
